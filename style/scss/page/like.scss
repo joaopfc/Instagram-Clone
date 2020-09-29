@@ -1,0 +1,190 @@
+@import "../styles.scss";
+
+/*-----Gerais-----*/
+body{
+    @extend %corpo;
+}
+
+.container{
+    @extend %container-Geral;
+}
+
+/*-----Gerais-----*/
+
+header{
+    @extend %headers;
+    height:88px ;
+    border-bottom: $borda-baixo;
+
+    .barra-notificacao{
+        @extend %barra-not;
+    }
+
+    .opcao{
+        @extend %flex-alinha;
+        margin: 6px 12px 0 12px;
+
+        .bloco{
+            display: flex;
+            align-items: center;
+            width: 180px;
+            height: 44px;
+
+            &:nth-of-type(2){
+                border-bottom:1px solid $cor-preto;
+            }
+
+            span{
+                @include fontes(16px,600);
+                color: rgba(0, 0, 0, 0.4);
+                margin: 11px 58px 12px 49px;
+                cursor: pointer;
+            }
+
+            .selecionada{
+                margin: 11px 58px 12px 49px;
+                color: $cor-preto;
+            }
+        } 
+    }
+}
+
+/*-----Header-----*/
+
+/*-----Main-----*/
+
+    main{
+        .follow-requests{
+            padding: 15px;
+            background-color:rgba(255, 255, 255, 0.0001);
+            border-bottom: $borda-baixo;
+    
+            span{
+                @include fontes-cor(15px, 400,$cor-preto);
+            }
+        }
+
+        .new{
+            @extend %container-follow;
+
+            p{
+                @extend %titulo-follow;
+             }
+     
+             .descricao{
+                 @extend %descricao;
+                
+                img{
+                    @extend %img-follow;
+                }
+        
+                span{
+                   @extend %span-follow;
+                }
+             }
+        }
+
+        .today{
+            @extend %container-follow;
+
+            p{
+                @extend %titulo-follow;
+            }
+
+            .descricao{
+                @extend %descricao;
+
+                img{
+                    @extend %img-follow;
+                }
+                span{
+                    @extend %span-follow;
+                }
+            }
+        }
+
+        .this-week{
+            @extend %container-follow;
+
+            p{
+                @extend %titulo-follow;
+            }
+
+            .descricao{
+                @extend %descricao;
+
+                img{
+                    @extend %img-follow;
+                }
+                span{
+                    @extend %span-follow;
+
+                    i{
+                        font-style: normal;
+                        color: #05386B;
+                    }
+                }
+            }
+
+            .curtir{
+                display: flex;
+                flex-direction: row;
+                margin-top: 15px;
+                margin-bottom: 23px;
+
+                img{
+                    margin-left: 74px;
+                    margin-right: 14px;
+                    cursor: pointer;
+                }
+
+                b{
+                    @include fontes-cor(11px, 600,#999999);
+                }
+            }
+
+            .descricao-02{
+                @extend %descricao;
+                
+                &:nth-of-type(5){
+                     margin-bottom:-19px ;
+                }
+
+                img{
+                    @extend %img-follow;
+                    margin-bottom: 16px;
+                    
+                    &:nth-of-type(1){
+                        margin-right: -60px;
+                    }
+                }
+
+                span{
+                    @extend %span-follow;
+                    margin-top: -20px;
+                }
+
+                
+                .um{
+                    @include fontes-cor(14px,600,$cor-preto);
+                    background:$fundo-like;
+                    @extend %botao;
+                }
+
+                .dois{
+                    @extend %botao;
+                    @include fontes-cor(14px,600,$fundo-like);
+                    background: #3797EF;
+                }
+            }
+        }
+    }
+
+/*-----Main-----*/
+
+/*-----footer-----*/
+
+footer{
+    @extend %foters;
+}
+
